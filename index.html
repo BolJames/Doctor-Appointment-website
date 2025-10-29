@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Aweil Civil Hospital — Appointments</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="container">
+  <header>
+    <h1>Aweil Civil Hospital</h1>
+    <p>Book an appointment with our trusted doctors</p>
+  </header>
+
+  <section class="book">
+    <h2>Book Appointment</h2>
+    <form id="appointmentForm">
+      <label>Patient name
+        <input type="text" id="patient_name" required>
+      </label>
+      <label>Phone
+        <input type="tel" id="patient_phone" placeholder="Optional">
+      </label>
+      <label>Doctor
+        <select id="doctorSelect" required>
+          <option value="">-- Select Doctor --</option>
+          <option>Dr. Bol Deng Akok — General Physician</option>
+          <option>Dr. Mary Nyandeng Chol — Pediatrician</option>
+          <option>Dr. John Garang Lual — Cardiologist</option>
+          <option>Dr. Adut Anei Mayen — Gynecologist</option>
+          <option>Dr. Peter Malok Deng — Surgeon</option>
+          <option>Dr. Grace Nyaluak Bol — Dermatologist</option>
+          <option>Dr. Deng Kuol Manyang — Orthopedic Specialist</option>
+          <option>Dr. Abuk Ajok Wani — ENT Specialist</option>
+          <option>Dr. Gatluak Lam Puot — Neurologist</option>
+          <option>Dr. Nyibol Achol Atem — Dentist</option>
+        </select>
+      </label>
+      <label>Date
+        <input type="date" id="date" required>
+      </label>
+      <label>Time
+        <input type="time" id="time" required>
+      </label>
+      <label>Reason
+        <textarea id="reason" rows="2" placeholder="Reason for visit"></textarea>
+      </label>
+      <button type="submit">Book Appointment</button>
+    </form>
+    <div id="msg" class="msg"></div>
+  </section>
+
+  <section class="list">
+    <h2>Upcoming Appointments</h2>
+    <div class="filters">
+      <label>Filter by doctor
+        <select id="filterDoctor">
+          <option value="">All</option>
+          <option>Dr. Bol Deng Akok</option>
+          <option>Dr. Mary Nyandeng Chol</option>
+          <option>Dr. John Garang Lual</option>
+          <option>Dr. Adut Anei Mayen</option>
+          <option>Dr. Peter Malok Deng</option>
+          <option>Dr. Grace Nyaluak Bol</option>
+          <option>Dr. Deng Kuol Manyang</option>
+          <option>Dr. Abuk Ajok Wani</option>
+          <option>Dr. Gatluak Lam Puot</option>
+          <option>Dr. Nyibol Achol Atem</option>
+        </select>
+      </label>
+      <label>Filter by date
+        <input type="date" id="filterDate">
+      </label>
+      <button id="applyFilters">Apply</button>
+    </div>
+    <ul id="appointmentsList"></ul>
+  </section>
+
+  <footer>© 2025 Aweil Civil Hospital. All Rights Reserved.</footer>
+</main>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
